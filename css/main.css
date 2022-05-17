@@ -118,7 +118,9 @@ p {
   line-height: 1.285;
 }
 
-img {}
+img {
+  width: 100%;
+}
 
 figure {}
 
@@ -150,7 +152,7 @@ aside {
 }
 
 .features {
-  background-image: url('../img/rawpixel-800820-unsplash1.jpg');
+  background-image: url('../img/features-photo.png');
   background-size: cover;
   background-position: center;
 }
@@ -610,6 +612,7 @@ input[type=button] {
 @media only screen and (min-width: 1200px) {
   header .content-wrapper {
     width: 100%;
+    justify-content: center;
   }
 
   .content-wrapper {
