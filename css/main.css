@@ -78,11 +78,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-  /* general styles */
-
+/* general styles */
 html {
   font-size: 16px;
 }
@@ -90,6 +86,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  color: #e2e3ed;
   text-align: left;
 }
 
@@ -106,51 +103,75 @@ a {
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
 }
 
 h3, h4 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   margin: 20px 0;
   font-size: 1.125em;
 }
 
 p {
-  font-size: .75em;
+  font-size: .875em;
   line-height: 1.285;
 }
 
-img {
+img {}
 
-}
-
-figure {
-
-}
+figure {}
 
 address {
   font-style: normal;
 }
 
+header .content-wrapper {
+  background: #202322;
+}
+
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
 }
 
-
-
-
-.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
+.hero-area {
+  background-image: url('../img/jake-melara-30679-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
+h1 {
+  color: #e2e3ed;
+}
 
+aside {
+  background: #527158;
+}
+
+.features {
+  background-image: url('../img/rawpixel-800820-unsplash1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+aside h3,
+aside p {
+  color: #e2e3ed;
+}
+
+.features h2 {
+  color: #e2e3ed;
+}
+
+.features p {
+  color: #e2e3ed;
+}
 
 /* ----------------Base header - footer styles ----------------------------*/
-
-
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,12 +191,16 @@ header .content-wrapper {
 }
 
 .header-divider {
+  background: #3a3a3a;
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
 }
 
 header nav {
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -190,8 +215,17 @@ header nav ul {
   width: 100%;
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 footer {
+  text-align: center;
   flex-direction: column;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer .contact {
@@ -215,10 +249,6 @@ footer .social-icons p {
   align-items: center;
 }
 
-footer p {
-  margin: 0;
-}
-
 footer .copyright {
   margin: 20px 0;
 }
@@ -230,7 +260,15 @@ footer .copyright {
   flex-flow: row wrap;
 }
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,6 +322,7 @@ aside {
 
 /*--------------------- Mobile Styles - About Page ---------------------*/
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,6 +330,7 @@ aside {
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,6 +343,7 @@ aside {
 
 /*--------------------- Mobile Styles - FAQ Page --------------------------*/
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,6 +447,32 @@ aside {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 768px) {
 
   /* tablet styles here*/
@@ -445,7 +512,6 @@ aside {
   }
 
   /* hero area */
-
   /*aside*/
   aside .content-wrapper {
     margin: 50px 0;
@@ -458,29 +524,30 @@ aside {
   aside .content-wrapper .form {
     width: 40%;
     margin: 0;
-}
-
-/*features*/
-  .features article {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-flow: column wrap;
-     flex-basis: 50%;
-   }
-
-   .features .features-item-description {
-     width: 50%;
-   }
-
-/*reviews*/
-   .reviews article {
-     display: flex;
-     justify-content: space-between;
   }
+
+  /*features*/
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+  .features .features-item-description {
+    width: 50%;
+  }
+
+  /*reviews*/
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .reviews article div {
     width: 49%;
-   }
+  }
 
   /*-----FAQ Page-----*/
   .faq .content-wrapper {
@@ -495,7 +562,7 @@ aside {
     width: 100%;
   }
 
-/*footer styles*/
+  /*footer styles*/
   footer .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -516,156 +583,152 @@ aside {
     width: 100%;
   }
 
-/*----ABOUT PAGE----*/
-.mission-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 20px
-    }
+  /*----ABOUT PAGE----*/
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px
+  }
 
-    .mission-content p {
-      width: 45%;
-    }
+  .mission-content p {
+    width: 45%;
+  }
 
-    .contact-section .content-wrapper h2 {
-      width: 80%;
-    }
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
 
-    .contact-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
-    /* desktop styles here */
-  @media only screen and (min-width: 1200px) {
-
-    .content-wrapper {
-      max-width: 960px;
-    }
-
-    /*hero*/
-
-    .hero-area h1 {
-      width: 60%;
-    }
-
-    /*aside*/
-    aside .content-wrapper {
-      justify-content: space-around;
-    }
-
-    aside .content-wrapper .form-description,
-    aside .content-wrapper .form {
-      width: 30%;
-    }
-
-
-    /*features*/
-    .features h2 {
-      width: 90%;
-    }
-
-    .features article {
-      flex-basis: 33%;
-    }
-
-    /*reviews*/
-    .reviews article div {
-      width: 42%;
-    }
-
-/*------------ABOUT PAGE------------*/
-    .mission h2,
-    .contact-section .content-wrapper h2 {
-      width: 95%;
-    }
-    }
-/*------------FAQ PAGE------------*/
-  .faq h2 {
+/* desktop styles here */
+@media only screen and (min-width: 1200px) {
+  header .content-wrapper {
     width: 100%;
   }
 
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  /*hero*/
+  .hero-area h1 {
+    width: 60%;
+  }
+
+  /*aside*/
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
+
+  /*features*/
+  .features h2 {
+    width: 90%;
+  }
+
+  .features article {
+    flex-basis: 33%;
+  }
+
+  /*reviews*/
+  .reviews article div {
+    width: 42%;
+  }
+
+  /*------------ABOUT PAGE------------*/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 95%;
+  }
 }
 
+/*------------FAQ PAGE------------*/
+.faq h2 {
+  width: 100%;
+}
+}
 
-
-
-
-
-  /* ==========================================================================
+/* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-  @media print {
+@media print {
 
-    *,
-    *::before,
-    *::after {
-      background: #fff !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]::after {
-      content: " ("attr(href) ")";
-    }
+  a[href]::after {
+    content: " ("attr(href) ")";
+  }
 
-    abbr[title]::after {
-      content: " ("attr(title) ")";
-    }
+  abbr[title]::after {
+    content: " ("attr(title) ")";
+  }
 
-    /*
+  /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-      content: "";
-    }
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
 
-    pre {
-      white-space: pre-wrap !important;
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
 
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-    thead {
-      display: table-header-group;
-    }
-
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
   }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
